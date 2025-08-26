@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency Service Directory</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center bg-white px-6 py-3 shadow">
+    <!-- Left: Logo + Title -->
+    <div class="flex items-center space-x-3">
+      <img src="https://img.icons8.com/color/48/000000/ambulance.png" alt="logo" class="w-10 h-10">
+      <h1 class="text-lg font-bold">Emergency Service</h1>
+    </div>
+
+    <!-- Right: Heart, Coins, Copy -->
+    <div class="flex items-center space-x-6">
+      <div class="flex items-center space-x-1">
+        <span class="text-red-500 text-xl">❤️</span>
+        <span id="heartCount">0</span>
+      </div>
+      <div class="flex items-center space-x-1">
+        <span class="text-yellow-500 text-xl">🪙</span>
+        <span id="coinCount">100</span>
+      </div>
+      <div class="bg-green-500 text-white px-3 py-1 rounded">Copy <span id="copyCount">0</span></div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-green-700 to-green-500 text-center py-10 text-white">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Bangladesh.svg" alt="logo" class="w-16 mx-auto mb-3">
+    <h2 class="text-2xl font-bold">Emergency Service Directory</h2>
+    <p class="text-sm mt-2">Government Emergency Services at Your Fingertip – A Project by Govt. of Bangladesh</p>
+  </section>
+
+  <!-- Main Section -->
+  <main class="grid grid-cols-1 lg:grid-cols-4 gap-6 p-6">
+    
+    <!-- Cards Section -->
+    <section class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" id="cardContainer">
+      
+      <!-- Card Template -->
+      <article class="bg-white shadow rounded-xl p-4 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-2xl">📞</span>
+            <button class="heartBtn text-gray-400 text-xl">🤍</button>
+          </div>
+          <h3 class="font-semibold">National Emergency Number</h3>
+          <p class="text-sm text-gray-500">National Emergency</p>
+          <p class="text-2xl font-bold my-2">999</p>
+          <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">All</span>
+        </div>
+        <div class="flex justify-between mt-3">
+          <button class="copyBtn border px-3 py-1 rounded text-sm">📋 Copy</button>
+          <button class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
+            data-service="National Emergency Number" data-number="999">📞 Call</button>
+        </div>
+      </article>
+
+      <!-- Police -->
+      <article class="bg-white shadow rounded-xl p-4 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-2xl">👮</span>
+            <button class="heartBtn text-gray-400 text-xl">🤍</button>
+          </div>
+          <h3 class="font-semibold">Police Helpline Number</h3>
+          <p class="text-sm text-gray-500">Police</p>
+          <p class="text-2xl font-bold my-2">999</p>
+          <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Police</span>
+        </div>
+        <div class="flex justify-between mt-3">
+          <button class="copyBtn border px-3 py-1 rounded text-sm">📋 Copy</button>
+          <button class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
+            data-service="Police Helpline Number" data-number="999">📞 Call</button>
+        </div>
+      </article>
+
+      <!-- Fire -->
+      <article class="bg-white shadow rounded-xl p-4 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-2xl">🚒</span>
+            <button class="heartBtn text-gray-400 text-xl">🤍</button>
+          </div>
+          <h3 class="font-semibold">Fire Service Number</h3>
+          <p class="text-sm text-gray-500">Fire Service</p>
+          <p class="text-2xl font-bold my-2">999</p>
+          <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Fire</span>
+        </div>
+        <div class="flex justify-between mt-3">
+          <button class="copyBtn border px-3 py-1 rounded text-sm">📋 Copy</button>
+          <button class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
+            data-service="Fire Service Number" data-number="999">📞 Call</button>
+        </div>
+      </article>
+
+      <!-- Ambulance -->
+      <article class="bg-white shadow rounded-xl p-4 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-2xl">🚑</span>
+            <button class="heartBtn text-gray-400 text-xl">🤍</button>
+          </div>
+          <h3 class="font-semibold">Ambulance Service</h3>
+          <p class="text-sm text-gray-500">Ambulance</p>
+          <p class="text-2xl font-bold my-2">1994-999999</p>
+          <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Health</span>
+        </div>
+        <div class="flex justify-between mt-3">
+          <button class="copyBtn border px-3 py-1 rounded text-sm">📋 Copy</button>
+          <button class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
+            data-service="Ambulance Service" data-number="1994-999999">📞 Call</button>
+        </div>
+      </article>
+
+      <!-- Women & Child -->
+      <article class="bg-white shadow rounded-xl p-4 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-2xl">👩‍👧</span>
+            <button class="heartBtn text-gray-400 text-xl">🤍</button>
+          </div>
+          <h3 class="font-semibold">Women & Child Helpline</h3>
+          <p class="text-sm text-gray-500">Women & Child</p>
+          <p class="text-2xl font-bold my-2">109</p>
+          <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Help</span>
+        </div>
+        <div class="flex justify-between mt-3">
+          <button class="copyBtn border px-3 py-1 rounded text-sm">📋 Copy</button>
+          <button class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
+            data-service="Women & Child Helpline" data-number="109">📞 Call</button>
+        </div>
+      </article>
+
+      <!-- Anti-Corruption -->
+      <article class="bg-white shadow rounded-xl p-4 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-2xl">⚖️</span>
+            <button class="heartBtn text-gray-400 text-xl">🤍</button>
+          </div>
+          <h3 class="font-semibold">Anti-Corruption Helpline</h3>
+          <p class="text-sm text-gray-500">Govt</p>
+          <p class="text-2xl font-bold my-2">106</p>
+          <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Govt</span>
+        </div>
+        <div class="flex justify-between mt-3">
+          <button class="copyBtn border px-3 py-1 rounded text-sm">📋 Copy</button>
+          <button class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
+            data-service="Anti-Corruption Helpline" data-number="106">📞 Call</button>
+        </div>
+      </article>
+
+      <!-- Electricity -->
+      <article class="bg-white shadow rounded-xl p-4 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-2xl">💡</span>
+            <button class="heartBtn text-gray-400 text-xl">🤍</button>
+          </div>
+          <h3 class="font-semibold">Electricity Helpline</h3>
+          <p class="text-sm text-gray-500">Electricity Outage</p>
+          <p class="text-2xl font-bold my-2">16216</p>
+          <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Electricity</span>
+        </div>
+        <div class="flex justify-between mt-3">
+          <button class="copyBtn border px-3 py-1 rounded text-sm">📋 Copy</button>
+          <button class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
+            data-service="Electricity Helpline" data-number="16216">📞 Call</button>
+        </div>
+      </article>
+
+      <!-- Brac -->
+      <article class="bg-white shadow rounded-xl p-4 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-2xl">🏥</span>
+            <button class="heartBtn text-gray-400 text-xl">🤍</button>
+          </div>
+          <h3 class="font-semibold">Brac Helpline</h3>
+          <p class="text-sm text-gray-500">NGO</p>
+          <p class="text-2xl font-bold my-2">16445</p>
+          <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">NGO</span>
+        </div>
+        <div class="flex justify-between mt-3">
+          <button class="copyBtn border px-3 py-1 rounded text-sm">📋 Copy</button>
+          <button class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
+            data-service="Brac Helpline" data-number="16445">📞 Call</button>
+        </div>
+      </article>
+
+      <!-- Railway -->
+      <article class="bg-white shadow rounded-xl p-4 flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-2xl">🚆</span>
+            <button class="heartBtn text-gray-400 text-xl">🤍</button>
+          </div>
+          <h3 class="font-semibold">Bangladesh Railway Helpline</h3>
+          <p class="text-sm text-gray-500">Railway</p>
+          <p class="text-2xl font-bold my-2">163</p>
+          <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Travel</span>
+        </div>
+        <div class="flex justify-between mt-3">
+          <button class="copyBtn border px-3 py-1 rounded text-sm">📋 Copy</button>
+          <button class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
+            data-service="Bangladesh Railway Helpline" data-number="163">📞 Call</button>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Call History -->
+    <aside class="bg-white shadow rounded-xl p-4">
+      <div class="flex justify-between items-center mb-3">
+        <h3 class="font-bold flex items-center space-x-1">📜 <span>Call History</span></h3>
+        <button id="clearHistory" class="text-red-500 text-sm">Clear</button>
+      </div>
+      <ul id="historyList" class="space-y-2 text-sm text-gray-700"></ul>
+    </aside>
+
+  </main>
+
+  <!-- JavaScript -->
+  <script>
+    const heartCount = document.getElementById("heartCount");
+    const coinCount = document.getElementById("coinCount");
+    const copyCount = document.getElementById("copyCount");
+    const historyList = document.getElementById("historyList");
+    const clearHistory = document.getElementById("clearHistory");
+
+    let hearts = 0;
+    let coins = 100;
+    let copies = 0;
+
+    // Heart buttons
+    document.querySelectorAll(".heartBtn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        hearts++;
+        heartCount.textContent = hearts;
+        btn.textContent = "❤️";
+      });
+    });
+
+    // Copy buttons
+    document.querySelectorAll(".copyBtn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        copies++;
+        copyCount.textContent = copies;
+        alert("Number copied!");
+      });
+    });
+
+    // Call buttons
+    document.querySelectorAll(".callBtn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const service = btn.dataset.service;
+        const number = btn.dataset.number;
+
+        if (coins < 20) {
+          alert("Not enough coins to make a call!");
+          return;
+        }
+
+        coins -= 20;
+        coinCount.textContent = coins;
+
+        alert(`Calling ${service} at ${number}`);
+
+        const li = document.createElement("li");
+        const time = new Date().toLocaleTimeString();
+        li.textContent = `${service} (${number}) - ${time}`;
+        historyList.appendChild(li);
+      });
+    });
+
+    // Clear history
+    clearHistory.addEventListener("click", () => {
+      historyList.innerHTML = "";
+    });
+  </script>
+</body>
+</html>
