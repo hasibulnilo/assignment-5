@@ -23,41 +23,40 @@
       <!-- Left: Logo + Title -->
       <div class="flex items-center space-x-3">
         <img src="./assets/logo.png" alt="logo" class="w-10 h-10" />
-        <h1 class="text-lg font-bold">Emergency Service</h1>
+        <h1 class="text-lg font-bold text-green-900">Emergency Service</h1>
       </div>
 
       <!-- Right: Heart, Coins, Copy -->
       <div class="flex items-center space-x-6">
         <div class="flex items-center space-x-1">
           <span class="text-red-500 text-xl"
-            ><img src="./assets/heart.png" alt="" class="w-[24px]"
+            ><img src="./assets/heart.png" alt="" class="w-[30px]"
           /></span>
-          <span id="heartCount">0</span>
+          <span id="heartCount" class="font-bold">0</span>
         </div>
         <div class="flex items-center space-x-1">
           <span class="text-yellow-500 text-xl"
-            ><img src="./assets/coin.png" alt="" class="w-[24px]"
+            ><img src="./assets/coin.png" alt="" class="w-[30px]"
           /></span>
-          <span id="coinCount">100</span>
+          <span id="coinCount" class="font-bold">100</span>
         </div>
-        <div class="bg-green-500 text-white px-3 py-1 rounded-2xl">
-          Copy <span id="copyCount">0</span>
+        <div
+          class="bg-green-600 text-white px-4 py-2 rounded-2xl font-semibold"
+        >
+          <span id="copyCount">0</span> Copy
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
     <section
-      class="bg-gradient-to-r from-green-700 to-green-500 text-center py-10 text-white"
+      class="bg-gradient-to-r from-[#006747] to-[#006747] text-center py-10 text-white"
     >
-      <img
-        src="./assets/logo-dark.png"
-        alt="logo"
-        class="w-16 mx-auto mb-3"
-      />
+      <img src="./assets/logo-dark.png" alt="logo" class="w-16 mx-auto mb-3" />
       <h2 class="text-2xl font-bold">Emergency Service Directory</h2>
       <p class="text-sm mt-2">
-        Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh
+        Government Emergency Services at Your Fingertip – A Project by
+        Government of the People’s Republic of Bangladesh
       </p>
     </section>
 
@@ -74,7 +73,9 @@
         >
           <div>
             <div class="flex justify-between items-center mb-2">
-              <span class="text-2xl">📞</span>
+              <span class="text-2xl"
+                ><img src="./assets/emergency.png" alt="" class="w-[30px]"
+              /></span>
               <button class="heartBtn text-gray-400 text-xl">🤍</button>
             </div>
             <h3 class="font-semibold">National Emergency Number</h3>
@@ -86,14 +87,14 @@
           </div>
           <div class="flex justify-between mt-3">
             <button class="copyBtn border px-3 py-1 rounded text-sm">
-              📋 Copy
+              <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
               data-service="National Emergency Number"
               data-number="999"
             >
-              📞 Call
+              <i class="fa-solid fa-phone"></i> Call
             </button>
           </div>
         </article>
@@ -104,7 +105,9 @@
         >
           <div>
             <div class="flex justify-between items-center mb-2">
-              <span class="text-2xl">👮</span>
+              <span class="text-2xl"
+                ><img src="./assets/police.png" alt="" class="w-[32px]"
+              /></span>
               <button class="heartBtn text-gray-400 text-xl">🤍</button>
             </div>
             <h3 class="font-semibold">Police Helpline Number</h3>
@@ -116,14 +119,14 @@
           </div>
           <div class="flex justify-between mt-3">
             <button class="copyBtn border px-3 py-1 rounded text-sm">
-              📋 Copy
+              <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
               data-service="Police Helpline Number"
               data-number="999"
             >
-              📞 Call
+              <i class="fa-solid fa-phone"></i> Call
             </button>
           </div>
         </article>
@@ -134,7 +137,12 @@
         >
           <div>
             <div class="flex justify-between items-center mb-2">
-              <span class="text-2xl">🚒</span>
+              <span class="text-2xl"
+                ><img
+                  src="./assets/fire-service.png"
+                  alt=""
+                  class="w-[30px] rounded-lg"
+              /></span>
               <button class="heartBtn text-gray-400 text-xl">🤍</button>
             </div>
             <h3 class="font-semibold">Fire Service Number</h3>
@@ -146,14 +154,14 @@
           </div>
           <div class="flex justify-between mt-3">
             <button class="copyBtn border px-3 py-1 rounded text-sm">
-              📋 Copy
+              <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
               data-service="Fire Service Number"
               data-number="999"
             >
-              📞 Call
+              <i class="fa-solid fa-phone"></i> Call
             </button>
           </div>
         </article>
@@ -164,7 +172,9 @@
         >
           <div>
             <div class="flex justify-between items-center mb-2">
-              <span class="text-2xl">🚑</span>
+              <span class="text-2xl"
+                ><img src="./assets/emergency.png" alt="" class="w-[30px]"
+              /></span>
               <button class="heartBtn text-gray-400 text-xl">🤍</button>
             </div>
             <h3 class="font-semibold">Ambulance Service</h3>
@@ -176,14 +186,14 @@
           </div>
           <div class="flex justify-between mt-3">
             <button class="copyBtn border px-3 py-1 rounded text-sm">
-              📋 Copy
+              <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
               data-service="Ambulance Service"
               data-number="1994-999999"
             >
-              📞 Call
+              <i class="fa-solid fa-phone"></i> Call
             </button>
           </div>
         </article>
@@ -194,7 +204,9 @@
         >
           <div>
             <div class="flex justify-between items-center mb-2">
-              <span class="text-2xl">👩‍👧</span>
+              <span class="text-2xl"
+                ><img src="./assets/emergency.png" alt="" class="w-[30px]"
+              /></span>
               <button class="heartBtn text-gray-400 text-xl">🤍</button>
             </div>
             <h3 class="font-semibold">Women & Child Helpline</h3>
@@ -206,14 +218,14 @@
           </div>
           <div class="flex justify-between mt-3">
             <button class="copyBtn border px-3 py-1 rounded text-sm">
-              📋 Copy
+              <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
               data-service="Women & Child Helpline"
               data-number="109"
             >
-              📞 Call
+              <i class="fa-solid fa-phone"></i> Call
             </button>
           </div>
         </article>
@@ -224,7 +236,9 @@
         >
           <div>
             <div class="flex justify-between items-center mb-2">
-              <span class="text-2xl">⚖️</span>
+              <span class="text-2xl"
+                ><img src="./assets/emergency.png" alt="" class="w-[30px]"
+              /></span>
               <button class="heartBtn text-gray-400 text-xl">🤍</button>
             </div>
             <h3 class="font-semibold">Anti-Corruption Helpline</h3>
@@ -236,14 +250,14 @@
           </div>
           <div class="flex justify-between mt-3">
             <button class="copyBtn border px-3 py-1 rounded text-sm">
-              📋 Copy
+              <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
               data-service="Anti-Corruption Helpline"
               data-number="106"
             >
-              📞 Call
+              <i class="fa-solid fa-phone"></i> Call
             </button>
           </div>
         </article>
@@ -254,7 +268,9 @@
         >
           <div>
             <div class="flex justify-between items-center mb-2">
-              <span class="text-2xl">💡</span>
+              <span class="text-2xl"
+                ><img src="./assets/emergency.png" alt="" class="w-[30px]"
+              /></span>
               <button class="heartBtn text-gray-400 text-xl">🤍</button>
             </div>
             <h3 class="font-semibold">Electricity Helpline</h3>
@@ -266,14 +282,14 @@
           </div>
           <div class="flex justify-between mt-3">
             <button class="copyBtn border px-3 py-1 rounded text-sm">
-              📋 Copy
+              <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
               data-service="Electricity Helpline"
               data-number="16216"
             >
-              📞 Call
+              <i class="fa-solid fa-phone"></i> Call
             </button>
           </div>
         </article>
@@ -284,7 +300,9 @@
         >
           <div>
             <div class="flex justify-between items-center mb-2">
-              <span class="text-2xl">🏥</span>
+              <span class="text-2xl"
+                ><img src="./assets/emergency.png" alt="" class="w-[30px]"
+              /></span>
               <button class="heartBtn text-gray-400 text-xl">🤍</button>
             </div>
             <h3 class="font-semibold">Brac Helpline</h3>
@@ -296,14 +314,14 @@
           </div>
           <div class="flex justify-between mt-3">
             <button class="copyBtn border px-3 py-1 rounded text-sm">
-              📋 Copy
+              <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
               data-service="Brac Helpline"
               data-number="16445"
             >
-              📞 Call
+              <i class="fa-solid fa-phone"></i> Call
             </button>
           </div>
         </article>
@@ -314,7 +332,9 @@
         >
           <div>
             <div class="flex justify-between items-center mb-2">
-              <span class="text-2xl">🚆</span>
+              <span class="text-2xl"
+                ><img src="./assets/emergency.png" alt="" class="w-[30px]"
+              /></span>
               <button class="heartBtn text-gray-400 text-xl">🤍</button>
             </div>
             <h3 class="font-semibold">Bangladesh Railway Helpline</h3>
@@ -326,14 +346,14 @@
           </div>
           <div class="flex justify-between mt-3">
             <button class="copyBtn border px-3 py-1 rounded text-sm">
-              📋 Copy
+              <i class="fa-regular fa-copy"></i> Copy
             </button>
             <button
               class="callBtn bg-green-500 text-white px-3 py-1 rounded text-sm"
               data-service="Bangladesh Railway Helpline"
               data-number="163"
             >
-              📞 Call
+              <i class="fa-solid fa-phone"></i> Call
             </button>
           </div>
         </article>
@@ -343,9 +363,14 @@
       <aside class="bg-white shadow rounded-xl p-4">
         <div class="flex justify-between items-center mb-3">
           <h3 class="font-bold flex items-center space-x-1">
-            📜 <span>Call History</span>
+            <i class="fa-regular fa-clock"></i> <span>Call History</span>
           </h3>
-          <button id="clearHistory" class="text-red-500 text-sm">Clear</button>
+          <button
+            id="clearHistory"
+            class="bg-green-600 text-white px-4 py-2 rounded-2xl font-semibold"
+          >
+            Clear
+          </button>
         </div>
         <ul id="historyList" class="space-y-2 text-sm text-gray-700"></ul>
       </aside>
