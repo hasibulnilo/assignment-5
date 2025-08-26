@@ -129,7 +129,7 @@ querySelectorAll("selector") = Selects all matching elements, returns NodeList (
 4. What is **Event Delegation** in JavaScript? Why is it useful?
    ans:Instead of adding event listeners to many child elements, you put one listener on their parent and handle events using event.target.
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
-   ans:preventDefault() → Stops the browser’s default action (e.g., stop link navigation, stop form submit). stopPropagation() → Stops the event from bubbling up to parent elements.
+   ans:preventDefault():Stops the browser’s default action (e.g., stop link navigation, stop form submit). stopPropagation():Stops the event from bubbling up to parent elements.
 
 ## 🧪 Challenges Part (10 Marks)
 
